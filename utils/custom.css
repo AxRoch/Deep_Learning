@@ -43,6 +43,13 @@ To remove title:
 #notebook-container.container {
     background-color: #383838;/*Around cells*/
 }
+body.notebook_app {
+    padding: 0;
+    background-color: #383838;
+    background: #383838;
+    padding-right: 0px !important;
+    overflow-y: hidden;
+}
 
 
 /*Header*/
@@ -688,3 +695,22 @@ div#notebook_list_header.row.list_header {
     background-color: #282828;
     padding: 2px;
 }
+/*Second tab*/
+div.panel,
+div.panel-default,
+.panel,
+.panel-default {
+ font-family: sans-serif;
+ font-size: 13pt;
+ background-color: #282828;
+ color: #f5f5f5;
+ margin-bottom: 14px;
+ border: 0;
+ box-shadow: none;
+}
+.list_container {
+    font-size: 13pt;
+    color: #f5f5f5;
+    border: none;
+    text-shadow: none !important;
+   }
