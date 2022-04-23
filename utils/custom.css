@@ -1,0 +1,690 @@
+/*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+
+/*
+To remove title:
+    div#maintoolbar {
+        display: none !important;
+    }
+    #header-container {
+        display: none !important;
+    }
+*/
+
+/*******************/
+/*Custom parameters*/
+/*******************/
+
+
+/*Title zone (filename)*/
+#header {
+    color: #d5d5d5;/*text color*/
+    background-color: #383838;/*background color*/
+}
+.checkpoint_status,
+.autosave_status {
+    color: #d5d5d5;/*Save status*/
+}
+
+
+/*Notebook Background*/
+#notebook {
+    background-color: #383838;/*General Background*/
+}
+#notebook-container.container {
+    background-color: #383838;/*Around cells*/
+}
+
+
+/*Header*/
+body > #header {
+    background: #383838;
+}
+.navbar-default {
+    background: none;
+    border: none;
+}
+.navbar-default .navbar-nav > li > a:hover,
+#kernel_indicator:hover {
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #d5d5d5;
+    color: #0858ee;
+}
+.navbar-default .navbar-nav > li > a, #kernel_indicator {
+    color: #d5d5d5;
+    background-color: #383838;
+    border-bottom: 2px solid #383838;
+    transition: all 0.25s;
+}
+span.save_widget span.filename:hover {
+    background-color: #1e1e1e;
+    border: 1px solid #0858ee;
+}
+/*When saving*/
+div.notification_widget.info,
+.notification_widget.info,
+.notification_widget:active:hover,
+.notification_widget.active:hover,
+.open > .dropdown-toggle.notification_widget:hover,
+.notification_widget:active:focus,
+.notification_widget.active:focus,
+.open > .dropdown-toggle.notification_widget:focus,
+.notification_widget:active.focus,
+.notification_widget.active.focus,
+.open > .dropdown-toggle.notification_widget.focus,
+div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
+div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
+div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
+    color: #ffee00 !important;
+}
+/*fiable*/
+.notification_widget,
+div.notification_widget {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    vertical-align: text-top !important;
+    margin-top: 6px !important;
+    color: #d5d5d5 !important;
+    background-color: #383838 !important;
+    font-size: 9pt !important;
+    border: none;
+}
+#kernel_indicator {
+    float: right !important;
+    color: #ffee00;
+    border-left: 1px solid #d5d5d5;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    margin-top: 10px !important;
+    margin-left: -2px;
+    padding-left: 5px !important;
+}
+#kernel_indicator .kernel_indicator_name {
+    font-size: 17px;
+    color: #ffee00;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 4px;
+    vertical-align: text-top;
+    padding-bottom: 0px;
+}
+
+
+/*Buttons*/
+.btn,
+.btn-default {
+    font-family: sans-serif;
+    color: #d5d5d5;
+    background: #282828;
+    background-color: #282828;
+    border: 2px solid #282828;
+    font-weight: normal;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 3px;
+    font-size: initial;
+}
+/*Buttons activation*/
+.btn:hover,
+.btn:active:hover,
+.btn.active:hover,
+.btn-default:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn:hover {
+    color: #0858ee;
+    border: 2px solid #1e1e1e;
+    background: #1e1e1e;
+    background-image: none;
+    box-shadow: none !important;
+    border-radius: 3px;
+}
+/*dropdown button*/
+.btn:active,
+.btn.active,
+.btn:active:focus,
+.btn.active:focus,
+.btn:active.focus,
+.btn.active.focus,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.btn-default:active:hover,
+.btn-default.active:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn:focus,
+.open > .dropdown-toggle.btn.focus,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.hover,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #0858ee;
+    border-bottom: 2px solid #d5d5d5;
+    background-color: #1e1e1e !important;
+    background: #1e1e1e !important;
+    background-image: none;
+    box-shadow: none !important;
+    border-radius: 3px;
+}
+
+
+/*Code cells*/
+div.input_area {
+    border: none;
+    border-radius: 0;
+    background: #1e1e1e;
+}
+.cm-s-ipython div.CodeMirror-selected {
+    background: #295075;
+    opacity: 0.75;
+}
+/*Text on the left of code cells*/
+div.prompt,
+.prompt {
+    font-family: monospace, monospace;
+    font-size: 9pt !important;
+    font-weight: normal;
+    color: #d5d5d5;
+    line-height: 170%;
+    padding: 0px;
+    padding-top: 4px;
+    padding-left: 0px;
+    padding-right: 80px;
+    text-align: right !important;
+    min-width: 11.5ex !important;
+    width: 11.5ex !important;
+}
+
+
+/*output text*/
+div.output_subarea.output_text.output_stream.output_stdout,
+div.output_subarea.output_text {
+    font-family: monospace, monospace;
+    font-size: 8.5pt !important;
+    line-height: 150% !important;
+    background-color: #383838;
+    color: #d5d5d5;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: 11.5px solid #383838;
+}
+div.output_area pre {
+    font-family: monospace, monospace;
+    font-size: 8.5pt !important;
+    line-height: 151% !important;
+    color: #d5d5d5;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+/*output cell's left*/
+div.out_prompt_overlay.prompt {
+    font-family: monospace, monospace;
+    font-weight: bold !important;
+    background-color: #383838;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    min-width: 11.5ex !important;
+    width: 11.5ex !important;
+    border-right: 2px solid #282828;
+    color: transparent;
+}
+/*Color around figures*/
+div.output_wrapper {
+    background-color: #484848;
+}
+
+
+/*Markdown*/
+div.rendered_html {
+    color: #d5d5d5;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #d5d5d5;/*Titles*/
+}
+div.CodeMirror,
+div.CodeMirror pre {
+    font-family: monospace, monospace;
+    font-size: 11pt;
+    line-height: 170%;
+    color: #ffffff;/*While writing*/
+}
+div.cell.text_cell .cm-s-default .cm-header {
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #ffffff !important;/*While writing (title)*/
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+/*Html links*/
+.rendered_html :link {
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #42a5f5;
+    text-decoration: underline;
+}
+.rendered_html :visited,
+.rendered_html :visited:active,
+.rendered_html :visited:focus {
+    color: #42a5f5;
+}
+.rendered_html :visited:hover,
+.rendered_html :link:hover {
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #0858ee;
+}
+.cm-s-default .cm-link {
+    color: #42a5f5;/*While writing*/
+}
+/*code-like style*/
+div.text_cell_render pre,
+div.text_cell_render code {
+    font-family: monospace, monospace;
+    font-size: 11pt !important;
+    line-height: 170% !important;
+    color: #d5d5d5;
+    background: #1e1e1e;
+    background-color: #1e1e1e;
+    max-width: 80%;
+    border-radius: 0px;
+    border-left: none;
+}
+/*Cursor while writing*/
+.CodeMirror-cursor {
+    border-left: 2px solid #d5d5d5;
+    border-right: none;
+    width: 0;
+}
+
+
+/*When selecting a box*/
+div.cell.selected, div.cell.selected.jupyter-soft-selected {
+    border: none;
+    box-shadow: 0 2px 6px #d5d5d5;
+    z-index: 10;
+    top: -10px;
+}
+
+
+/*************/
+/*Code colors*/
+/*************/
+.CodeMirror-linenumber {
+    color: #8fca9a;
+}
+.cm-s-ipython .CodeMirror-cursor {
+    border-left: 2px solid #adaeac !important;/*curseur*/
+}
+.cm-s-ipython span.cm-comment {
+    color: #68a757;/*comments*/
+    font-style: italic;
+}
+.cm-s-ipython span.cm-atom {
+    color: #be86e3;
+}
+.cm-s-ipython span.cm-number {
+    color: #b3cda9;
+}
+.cm-s-ipython span.cm-property {
+    color: #cdd2e9;
+}
+.cm-s-ipython span.cm-attribute {
+    color: #cdd2e9;
+}
+.cm-s-ipython span.cm-keyword {
+    color: #5499d1;/*def, import, return*/
+    font-weight: normal;
+}
+.cm-s-ipython span.cm-string {
+    color: #cd9078;/*strings*/
+}
+.cm-s-ipython span.cm-meta {
+    color: #ffec8e;/*@property*/
+}
+.cm-s-ipython span.cm-operator {
+    color: #00b4ff;/*+ = - >*/
+}
+.cm-s-ipython span.cm-builtin {
+    color: #e17e85;
+}
+.cm-s-ipython span.cm-variable {
+    color: #cdd2e9;/*variables*/
+}
+.cm-s-ipython span.cm-variable-2 {
+    color: #e17e85;
+}
+.cm-s-ipython span.cm-variable-3 {
+    color: #ffec8e;
+}
+.cm-s-ipython span.cm-def {
+    color: #dbdbac;
+    font-weight: normal;
+}
+.cm-s-ipython span.cm-error {
+    background: rgba(191, 97, 106, .4);
+}
+.cm-s-ipython span.cm-tag {
+    color: #be86e3;
+}
+.cm-s-ipython span.cm-link {
+    color: #51c0ef;
+}
+.cm-s-ipython span.cm-storage {
+    color: #be86e3;
+}
+.cm-s-ipython span.cm-entity {
+    color: #be86e3;
+}
+.cm-s-ipython span.cm-quote {
+    color: #61ba86;
+}
+/*parenteses*/
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #ffff00;
+    font-weight: bold;
+    background-color: #49483e;
+}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #000000;
+    font-weight: bold;
+    background: rgba(249, 38, 114, .4) !important;
+}
+.cm-s-ipython.CodeMirror {
+    font-family: monospace, monospace;
+    font-size: 11pt;
+    color: #d5d5d5;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/***************/
+/*dropdown menu*/
+/***************/
+
+/*when clicking on menu*/
+.dropdown-menu {
+    z-index: 999999 !important; /*define who is above who*/
+    color: #d5d5d5;
+    background-color: #1e1e1e;
+    opacity: 0.95;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #0858ee; /*Stay changed while open*/
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #d5d5d5;
+}
+.dropdown-menu > li > a {
+    font-family: sans-serif;
+    font-size: 12.0pt;
+    display: block;
+    padding: 10px 20px 9px 10px;
+    color: #d5d5d5; /*text in dropdown menu*/
+    background-color: #282828;
+    background: #282828;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #0858ee;
+    background-color: #1e1e1e;
+    background: #1e1e1e;
+    border-color: #282828;
+    transition: 200ms ease;
+}
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 0px 0px;
+    overflow: hidden;
+    background-color: #383838;/*lines separing main parts in the dropdown-menu*/
+}
+/*Words on which one can't click*/
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+    font-family: sans-serif;
+    font-size: 12.0pt;
+    font-weight: normal;
+    color: #383838;
+    padding: none;
+    display: block;
+    clear: both;
+    white-space: nowrap;
+}
+.dropdown-submenu > a:after {
+    color: #d5d5d5; /*arrows in dropdown menu*/
+    margin-right: -16px;
+    margin-top: 0px;
+    display: inline-block;
+}
+.dropdown-submenu:hover > a:after,
+.dropdown-submenu:active > a:after,
+.dropdown-submenu:focus > a:after,
+.dropdown-submenu:visited > a:after {
+    color: #0858ee;/*active arrow*/
+    margin-right: -16px;
+    display: inline-block !important;
+}
+/*Keyboard shortcuts*/
+kbd {
+    padding: 1px;
+    font-size: 11pt;
+    font-weight: 800;
+    color: #f8f8f0;
+    background-color: transparent !important;
+    border: 0;
+    box-shadow: none;
+}
+
+
+/*Pop-up windows*/
+.modal-header {
+    font-family: sans-serif;
+    font-size: 13pt;
+    background-color: #282828;
+    border-color: #282828;
+    padding: 12px;
+    min-height: 16.4286px;
+}
+.modal-content h4 {
+    font-family: sans-serif;
+    font-size: 16pt;
+    color: #d5d5d5;
+    padding: 5px;
+}
+.modal-body {
+    background-color: #383838;
+    position: relative;
+    padding: 15px;
+}
+.modal-footer {
+    padding: 8px;
+    text-align: right;
+    background-color: #383838;
+    border-top: none;
+}
+
+
+
+/***********/
+/*Home page*/
+/***********/
+
+/*General Background*/
+body,
+div.body {
+    font-size: 13pt;
+    color: #d5d5d5;
+    background-color: #383838;
+    background: #383838;
+    -webkit-font-smoothing: antialiased !important;
+}
+body > #header .header-bar {
+    width: 100%;
+    background: #d5d5d5;/*Bar above*/
+}
+
+
+/*Menu*/
+/*Menu text*/
+a {
+    font-family: sans-serif;
+    color: #d5d5d5;
+    -webkit-font-smoothing: antialiased !important;
+}
+/*Menu bar*/
+.nav-tabs {
+    font-family: sans-serif;
+    font-size: 13.5pt;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #282828;
+    border-color: transparent;
+    text-shadow: none !important;
+    border: 2px solid transparent;
+}
+/*Menu activation*/
+.nav-tabs > li > a:active,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: rgb(8, 88, 238);
+    background-color: #1e1e1e;
+    border-color: transparent;
+    border-bottom: 2px solid #d5d5d5;
+}
+/*Text under menu*/
+div#notebook_toolbar div.dynamic-instructions {
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #d5d5d5;
+}
+
+
+/*Docs infos*/
+.list_container {
+    font-size: 13pt;
+    color: #d5d5d5;
+    border: none;
+    text-shadow: none !important;
+}
+/*Docs title*/
+.list_container a {
+    font-size: 16px;
+    color: #d5d5d5;
+    border: none;
+    text-shadow: none !important;
+    font-weight: normal;
+    font-style: normal;
+}
+/*When passing mouse cursor on docs*/
+div.list_item:hover {
+    color: #0858ee;
+    background-color: #282828;
+}
+/*Bar above docs*/
+.list_header,
+div#notebook_list_header.row.list_header {
+    font-size: 14pt;
+    background-color: #282828;
+    height: 35px;
+}
+
+
+/*Folders and file icons (see https://astronautweb.co/snippet/font-awesome/)*/
+.fa-folder:before {
+    color: #0858ee;
+}
+.breadcrumb > li + li:before {
+    content: "/\00a0";
+    padding: 0px;
+    color: #d5d5d5; /*current path*/
+    font-size: 18px;
+}
+.folder_icon:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f07b";
+    color: #0858ee;
+}
+.file_icon:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f15b";
+    position: relative;
+    top: 0px;
+    color: #d5d5d5;
+}
+.running_notebook_icon:before {
+    color: #ffee00; /*running*/
+    font: normal normal normal 15px/1 FontAwesome;
+    font-size: 15px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f10c";
+    vertical-align: middle;
+    position: static;
+    display: inherit;
+}
+.notebook_icon:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f02d";
+    position: relative;
+    color: #d5d5d5 !important;
+    top: 0px;
+}
+
+
+/*Other tabs*/
+#running .panel-group .panel .panel-heading {
+    font-size: 14pt;
+    color: #d5d5d5;
+    padding: 8px 8px;
+    background: #1e1e1e;
+    background-color: #1e1e1e;
+}
+#running .panel-group .panel .panel-heading a {
+    font-size: 14pt;
+    color: #d5d5d5;
+}
+#running .panel-group .panel .panel-body .list_container .list_item {
+    background: #282828;
+    background-color: #282828;
+    padding: 2px;
+}
