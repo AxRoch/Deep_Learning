@@ -198,6 +198,16 @@ div.input_area {
     background: #295075;
     opacity: 0.75;
 }
+/*Line numbers*/
+.cm-s-ipython .CodeMirror-gutters {
+    background: #1e1e1e;
+    border-right: 1px solid #383838;
+    border-radius: 0;
+    width: 36px;
+}
+.cm-s-ipython .CodeMirror-linenumber {
+    color: #990;
+}
 /*Text on the left of code cells*/
 div.prompt,
 .prompt {
@@ -713,4 +723,4 @@ div.panel-default,
     color: #f5f5f5;
     border: none;
     text-shadow: none !important;
-   }
+}
