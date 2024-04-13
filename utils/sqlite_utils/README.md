@@ -103,3 +103,23 @@ sql.apply(table='table1',
 # Commit the modifications
 sql.commit()
 ```
+
+If the amount of data to fetch is too large to be completely loaded, the `iter` method can be used
+instead of `execute_and_fetch`. This method creates an iterator that iterates over the results of
+the specified sql statement. For example:
+
+```python
+total = 0
+for elem in sql.iter('SELECT col1 FROM table1'):
+    total += elem
+```
+
+For other specific applications, the class also provides a `safe_cursor` method which returns a
+context manager enabling to create a cursor that will be automatically closed once the `with`
+statement is over:
+
+```python
+with sql.safe_cursor() as col1_cursor:
+    col1_cursor.execute('SELECT col1 FROM table1')
+    col1 = col1_cursor.fetchall()
+```

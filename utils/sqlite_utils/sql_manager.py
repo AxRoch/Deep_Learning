@@ -1,4 +1,37 @@
+from contextlib import closing
 import sqlite3
+
+
+class _FetchOneIterator:
+
+    def __init__(self, connection, request, parameters=()):
+        self.connection = connection
+        self.request = request
+        self.parameters = parameters
+        self.cursor = None
+    
+
+    def __iter__(self):
+        self.cursor = self.connection.cursor()
+        try:
+            self.cursor.execute(self.request, self.parameters)
+        except Exception as e:
+            self.cursor.close()
+            raise e
+        return self
+
+
+    def __next__(self):
+        try:
+            output= self.cursor.fetchone()
+        except Exception as e:
+            self.cursor.close()
+            raise e
+        if output is None:
+            self.cursor.close()
+            raise StopIteration
+        return output
+
 
 
 class SQLManager():
@@ -104,7 +137,7 @@ class SQLManager():
         
         return result
     
-    
+
     def get_column_names(self, table_name):
         """Returns the names of all the column of the given table.
 
@@ -119,6 +152,20 @@ class SQLManager():
         )
         
         return [res[0] for res in result]
+    
+
+    def iter(self, sql, parameters=()):
+        """Instantiates an iterator that executes the provided SQL statement and iterates over the
+        result.
+
+        Args
+        ----
+        sql : str
+            The given SQL statement to execute
+        parameters : dict or sequence, optional
+            Values to bind to placeholders in the given statement.
+        """
+        return _FetchOneIterator(self.connection, sql, parameters)
     
 
     def load_db(self, path_db):
@@ -137,6 +184,13 @@ class SQLManager():
         print(f"Loading {path_db}")
         self.connection = sqlite3.connect(path_db)
         self.path_db = path_db
+    
+
+    def safe_cursor(self):
+        """Instantiates a context manager which yields a cursor that will automatically be closed after after the end of
+        the `with` statement.
+        """
+        return closing(self.connection.cursor())
     
     
     def summary(self):
